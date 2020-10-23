@@ -59,13 +59,20 @@
           return "";
       }
 
+      function show_image(link) {
+        if (link)
+          return "<img src='" + link + "'>";
+        else
+          return "";
+      }
+
       CsvToHtmlTable.init({
         csv_path: 'data/emnlp2020_long.csv',
         element: 'table-container', 
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false},
-        custom_formatting: [[2, format_link]]
+        custom_formatting: [[2, format_link], [4, show_image]]
       });
     </script>
   </body>
