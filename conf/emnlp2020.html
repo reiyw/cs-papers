@@ -12,6 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../css/datatables.mark.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -45,6 +46,8 @@
     <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="../js/dataTables.bootstrap.js"></script>
     <script type="text/javascript" src="../js/csv_to_html_table.js"></script>
+    <script type="text/javascript" src="../js/datatables.mark.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mark.min.js"></script>
 
 
     <script type="text/javascript">
@@ -67,7 +70,7 @@
         element: 'table-container', 
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
-        datatables_options: {"paging": false},
+        datatables_options: {paging: false, mark: true},
         // custom_formatting: [[2, format_link]],
         custom_formatting: [[2, format_link], [5, show_image]],
       });
